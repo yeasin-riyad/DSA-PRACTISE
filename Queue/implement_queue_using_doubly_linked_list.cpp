@@ -62,6 +62,14 @@ public:
         return head->data;
     }
 
+    int back(){
+        if(tail == NULL){
+            cout << "Queue is empty" << endl;
+            return -1;
+        }
+        return tail->data;
+    }
+
     int Size(){
         return size;
     }
@@ -91,6 +99,7 @@ int main(){
         q.enqueue(x);
     }
     cout << "Front element is: " << q.front() << endl;
+    cout << "Back element is: " << q.back() << endl;
     cout << "Size of queue is: " << q.Size() << endl;
     cout << "Elements in queue are: ";
     q.display();
@@ -100,6 +109,7 @@ int main(){
         q.dequeue();
     }
     cout << "Front element after dequeue is: " << q.front() << endl;
+    cout << "Back element after dequeue is: " << q.back() << endl;
     cout << "Size after dequeue is: " << q.Size() << endl;
     cout << "Elements in queue after dequeue are: ";
     q.display();
